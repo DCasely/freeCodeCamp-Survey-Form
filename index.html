@@ -5,37 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./styles.css" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
     <title>FCC: Survey Form</title>
   </head>
   <body>
     <!-- Headline for the Form -->
-    <div>
-      <h1>freeCodeCamp Survey Form</h1>
-      <p>
+    <div id="header">
+      <h1 id="title">freeCodeCamp Survey Form</h1>
+      <p id="description">
         <em>Thank you for taking the time to help us improve the platform</em>
       </p>
     </div>
 
     <!-- Form Section -->
     <div>
-      <form action="">
+      <form id="survey-form">
         <div>
-          <label for="name">Name</label>
-          <input type="text" id="name" placeholder="Enter your name" />
+          <label for="name" id="name-label">Name</label>
+          <input type="text" id="name" placeholder="Enter your name" required />
         </div>
         <div>
-          <label for="email">Email</label>
-          <input type="email" id="email" placeholder="Enter your Email" />
+          <label for="email" id="email-label">Email</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="Enter your Email"
+            required
+          />
         </div>
         <div>
-          <label for="age">Age <span>(optional)</span></label>
-          <input type="number" id="age" placeholder="Age" />
+          <label for="number" id="number-label"
+            >Age <span>(optional)</span></label
+          >
+          <input
+            type="number"
+            id="number"
+            min="18"
+            max="99"
+            placeholder="Age"
+          />
         </div>
         <div>
-          <label for="role"
+          <label for="dropdown"
             >Which option best describes your current role?</label
           >
-          <select name="role" id="role" required>
+          <select name="role" id="dropdown" required>
             <option disabled selected value>Select Current Role</option>
             <option value="student">Student</option>
             <option value="full-time job">Full-Time Job</option>
@@ -44,28 +64,30 @@
             <option value="other">other</option>
           </select>
         </div>
-        <div>
+        <div id="recommend">
           <label for="recommend"
-            >Would you recommend freeCodeCamp to a friend</label
+            >Would you recommend freeCodeCamp to a friend?</label
           >
-          <input
-            type="radio"
-            name="recommend"
-            id="recommend"
-            value="definitely"
-          />Definitely
-          <input
-            type="radio"
-            name="recommend"
-            id="recommend"
-            value="maybe"
-          />Maybe
-          <input
-            type="radio"
-            name="recommend"
-            id="recommend"
-            value="not-sure"
-          />Not Sure
+          <div id="recommend-inputs">
+            <input
+              type="radio"
+              name="recommend"
+              id="definitely"
+              value="definitely"
+            />Definitely
+            <input
+              type="radio"
+              name="recommend"
+              id="maybe"
+              value="maybe"
+            />Maybe
+            <input
+              type="radio"
+              name="recommend"
+              id="not-sure"
+              value="not-sure"
+            />Not Sure
+          </div>
         </div>
         <div>
           <label for="favorite-feature"
@@ -79,87 +101,111 @@
             <option value="open-source">Open Source</option>
           </select>
         </div>
-        <div>
+        <div id="improvement">
           <label for="improvement"
             >What would you like to see improved?
             <span>(Check all that apply)</span></label
           >
-          <input
-            type="checkbox"
-            name="improvement"
-            id="front-end-projects"
-            value="front-end-projects"
-          />Front-end Projects
+          <div id="improvement-inputs">
+            <div>
+              <input
+                type="checkbox"
+                name="improvement"
+                id="front-end-projects"
+                value="front-end-projects"
+              />Front-end Projects
+            </div>
 
-          <input
-            type="checkbox"
-            name="improvement"
-            id="back-end-projects"
-            value="back-end-projects"
-          />Back-end Projects
+            <div>
+              <input
+                type="checkbox"
+                name="improvement"
+                id="back-end-projects"
+                value="back-end-projects"
+              />Back-end Projects
+            </div>
 
-          <input
-            type="checkbox"
-            name="improvement"
-            id="data-visualization"
-            value="data-visualization"
-          />Data Visualization
+            <div>
+              <input
+                type="checkbox"
+                name="improvement"
+                id="data-visualization"
+                value="data-visualization"
+              />Data Visualization
+            </div>
 
-          <input
-            type="checkbox"
-            name="improvement"
-            id="challenges"
-            value="challenges"
-          />Challenges
+            <div>
+              <input
+                type="checkbox"
+                name="improvement"
+                id="challenges"
+                value="challenges"
+              />Challenges
+            </div>
 
-          <input
-            type="checkbox"
-            name="improvement"
-            id="open-source-community"
-            value="open-source-community"
-          />Open Source Community
+            <div>
+              <input
+                type="checkbox"
+                name="improvement"
+                id="open-source-community"
+                value="open-source-community"
+              />Open Source Community
+            </div>
 
-          <input
-            type="checkbox"
-            name="improvement"
-            id="gitter-help-rooms"
-            value="gitter-help-rooms"
-          />Gitter help rooms
+            <div>
+              <input
+                type="checkbox"
+                name="improvement"
+                id="gitter-help-rooms"
+                value="gitter-help-rooms"
+              />Gitter help rooms
+            </div>
 
-          <input
-            type="checkbox"
-            name="improvement"
-            id="videos"
-            value="videos"
-          />Videos
+            <div>
+              <input
+                type="checkbox"
+                name="improvement"
+                id="videos"
+                value="videos"
+              />Videos
+            </div>
 
-          <input
-            type="checkbox"
-            name="improvement"
-            id="city-meetups"
-            value="city-meetups"
-          />City Meetups
+            <div>
+              <input
+                type="checkbox"
+                name="improvement"
+                id="city-meetups"
+                value="city-meetups"
+              />City Meetups
+            </div>
 
-          <input
-            type="checkbox"
-            name="improvement"
-            id="wiki"
-            value="wiki"
-          />Wiki
+            <div>
+              <input
+                type="checkbox"
+                name="improvement"
+                id="wiki"
+                value="wiki"
+              />Wiki
+            </div>
 
-          <input
-            type="checkbox"
-            name="improvement"
-            id="forum"
-            value="forum"
-          />Forum
+            <div>
+              <input
+                type="checkbox"
+                name="improvement"
+                id="forum"
+                value="forum"
+              />Forum
+            </div>
 
-          <input
-            type="checkbox"
-            name="improvement"
-            id="additional-courses"
-            value="additional-courses"
-          />Additional Courses
+            <div>
+              <input
+                type="checkbox"
+                name="improvement"
+                id="additional-courses"
+                value="additional-courses"
+              />Additional Courses
+            </div>
+          </div>
         </div>
         <div>
           <label for="comments-suggestions">Any Comments or suggestions</label>
@@ -170,7 +216,7 @@
             rows="10"
           ></textarea>
         </div>
-        <input type="submit" value="Submit" />
+        <input type="submit" id="submit" value="Submit" />
       </form>
     </div>
 
